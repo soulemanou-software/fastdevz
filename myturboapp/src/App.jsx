@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { collection ,getDocs, addDoc , updateDoc, deleteDoc} from "firebase/firestore";
 import { db } from "./modules/firebase-config";
-import { async } from "@firebase/util";
+
 
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
 
   }
 
-  const deleteTodo =async (id)=>{
+  const deleteTodo = async (id)=>{
     const docRef = doc(db, "turbo-data",id);
     await deleteDoc(docRef);
   }
